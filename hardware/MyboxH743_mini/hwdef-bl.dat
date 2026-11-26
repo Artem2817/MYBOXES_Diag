@@ -1,0 +1,32 @@
+# Bootloader hardware definition for MyboxH743_mini
+
+MCU STM32H7xx STM32H743xx
+APJ_BOARD_ID 1478
+
+OSCILLATOR_HZ 8000000
+FLASH_SIZE_KB 2048
+
+# Bootloader is located at the start of flash; application starts after 128 KiB.
+FLASH_RESERVE_START_KB 0
+FLASH_BOOTLOADER_LOAD_KB 128
+
+# Allow bootloading over USB and UART7.
+SERIAL_ORDER OTG1 UART7
+
+PA11 OTG_FS_DM OTG1
+PA12 OTG_FS_DP OTG1
+
+PA13 JTMS-SWDIO SWD
+PA14 JTCK-SWCLK SWD
+
+PE7 UART7_RX UART7 NODMA
+PE8 UART7_TX UART7 NODMA
+
+PE4 LED_BOOTLOADER OUTPUT LOW
+define HAL_LED_ON 1
+
+# Keep SPI devices deselected while the bootloader is running.
+PC15 IMU1_CS CS
+PB12 MAX7456_CS CS
+
+define HAL_USE_EMPTY_STORAGE 1

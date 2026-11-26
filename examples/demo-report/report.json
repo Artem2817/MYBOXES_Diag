@@ -1,0 +1,1034 @@
+{
+  "schema": 2,
+  "scope": "automatic_checks_only",
+  "session_id": "343900f1-fa4c-42ba-8efd-17c982561252",
+  "started_utc": "2026-11-20T16:02:07.423620+00:00",
+  "exported_utc": "2026-11-20T16:02:11.005198+00:00",
+  "demo": true,
+  "evidence": "DEMONSTRATION_ONLY",
+  "board": {
+    "id": 1,
+    "ok": true,
+    "op": "info",
+    "profile": "MyboxH743_mini_v2_vib",
+    "revision_source": "build_profile",
+    "hardware_revision": null,
+    "mcu": "SIMULATED STM32H743xx",
+    "uid": "DEMO-NO-PHYSICAL-BOARD",
+    "firmware": "MyboxDiag DEMO 0.2.2",
+    "build_id": "simulation",
+    "protocol": 1,
+    "uptime_ms": 0,
+    "test_count": 13,
+    "imu_count": 2,
+    "barometer_count": 2,
+    "orientation_source": "hardware_profile",
+    "demo": true
+  },
+  "inventory": {
+    "id": "MyboxH743_mini_v2_vib",
+    "index": 2,
+    "mcu": "STM32H743xx",
+    "board_id": 1480,
+    "revision_hardware_verified": false,
+    "rotation_source": "hardware_profile",
+    "hwdef_sha256": "8cee6dc01d7bf1ae00b0805a5f6ab11ffbd6ea5be8fe3e357ff33b5b1762f3d2",
+    "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat",
+    "imus": [
+      {
+        "id": "imu0",
+        "model": "ICM-45686",
+        "spi": "SPI2",
+        "device": "imu_main",
+        "cs": "PB12",
+        "rotation": "ROTATION_NONE",
+        "rotation_source": "hardware_profile",
+        "irq": null
+      },
+      {
+        "id": "imu1",
+        "model": "ICM-42670-P",
+        "spi": "SPI1",
+        "device": "imu_isolated",
+        "cs": "PA4",
+        "rotation": "ROTATION_NONE",
+        "rotation_source": "hardware_profile",
+        "irq": null
+      }
+    ],
+    "barometers": [
+      {
+        "id": "baro0",
+        "model": "SPA06-003",
+        "bus": "I2C1",
+        "address": 118
+      },
+      {
+        "id": "baro1",
+        "model": "SPA06-003",
+        "bus": "I2C1",
+        "address": 119
+      }
+    ],
+    "compass": "external_only",
+    "spi_flash": "not_declared",
+    "pins": [
+      {
+        "pin": "PA11",
+        "signal": "OTG_FS_DM",
+        "config": "OTG1",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:13"
+      },
+      {
+        "pin": "PA12",
+        "signal": "OTG_FS_DP",
+        "config": "OTG1",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:14"
+      },
+      {
+        "pin": "PA13",
+        "signal": "JTMS-SWDIO",
+        "config": "SWD",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:15"
+      },
+      {
+        "pin": "PA14",
+        "signal": "JTCK-SWCLK",
+        "config": "SWD",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:16"
+      },
+      {
+        "pin": "PB13",
+        "signal": "SPI2_SCK",
+        "config": "SPI2",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:19"
+      },
+      {
+        "pin": "PC2",
+        "signal": "SPI2_MISO",
+        "config": "SPI2",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:20"
+      },
+      {
+        "pin": "PC3",
+        "signal": "SPI2_MOSI",
+        "config": "SPI2",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:21"
+      },
+      {
+        "pin": "PB12",
+        "signal": "IMU1_CS",
+        "config": "CS",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:22"
+      },
+      {
+        "pin": "PA5",
+        "signal": "SPI1_SCK",
+        "config": "SPI1",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:25"
+      },
+      {
+        "pin": "PA6",
+        "signal": "SPI1_MISO",
+        "config": "SPI1",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:26"
+      },
+      {
+        "pin": "PA7",
+        "signal": "SPI1_MOSI",
+        "config": "SPI1",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:27"
+      },
+      {
+        "pin": "PA4",
+        "signal": "IMU2_CS",
+        "config": "CS",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:28"
+      },
+      {
+        "pin": "PE12",
+        "signal": "SPI4_SCK",
+        "config": "SPI4",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:31"
+      },
+      {
+        "pin": "PE13",
+        "signal": "SPI4_MISO",
+        "config": "SPI4",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:32"
+      },
+      {
+        "pin": "PE14",
+        "signal": "SPI4_MOSI",
+        "config": "SPI4",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:33"
+      },
+      {
+        "pin": "PE11",
+        "signal": "MAX7456_CS",
+        "config": "CS",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:34"
+      },
+      {
+        "pin": "PD11",
+        "signal": "SENSOR_PWR_EN",
+        "config": "OUTPUT HIGH",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:36"
+      },
+      {
+        "pin": "PB8",
+        "signal": "I2C1_SCL",
+        "config": "I2C1",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:38"
+      },
+      {
+        "pin": "PB7",
+        "signal": "I2C1_SDA",
+        "config": "I2C1",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:39"
+      },
+      {
+        "pin": "PB10",
+        "signal": "I2C2_SCL",
+        "config": "I2C2",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:40"
+      },
+      {
+        "pin": "PB11",
+        "signal": "I2C2_SDA",
+        "config": "I2C2",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:41"
+      },
+      {
+        "pin": "PD12",
+        "signal": "I2C4_SCL",
+        "config": "I2C4",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:42"
+      },
+      {
+        "pin": "PB9",
+        "signal": "I2C4_SDA",
+        "config": "I2C4",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:43"
+      },
+      {
+        "pin": "PC0",
+        "signal": "BATT_VOLTAGE_SENS",
+        "config": "ADC1 SCALE(1)",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:49"
+      },
+      {
+        "pin": "PC1",
+        "signal": "BATT_CURRENT_SENS",
+        "config": "ADC1 SCALE(1)",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:50"
+      },
+      {
+        "pin": "PC4",
+        "signal": "PRESSURE_SENS",
+        "config": "ADC1 SCALE(2)",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:51"
+      },
+      {
+        "pin": "PC5",
+        "signal": "RSSI_ADC",
+        "config": "ADC1",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:52"
+      },
+      {
+        "pin": "PE4",
+        "signal": "LED1",
+        "config": "OUTPUT HIGH GPIO(91)",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:64"
+      },
+      {
+        "pin": "PE2",
+        "signal": "LED_SAFETY",
+        "config": "OUTPUT",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:67"
+      },
+      {
+        "pin": "PE3",
+        "signal": "SAFETY_IN",
+        "config": "INPUT PULLDOWN",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:68"
+      },
+      {
+        "pin": "PD5",
+        "signal": "USART2_TX",
+        "config": "USART2",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:72"
+      },
+      {
+        "pin": "PD6",
+        "signal": "USART2_RX",
+        "config": "USART2",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:73"
+      },
+      {
+        "pin": "PD4",
+        "signal": "USART2_RTS",
+        "config": "USART2",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:74"
+      },
+      {
+        "pin": "PD3",
+        "signal": "USART2_CTS",
+        "config": "USART2",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:75"
+      },
+      {
+        "pin": "PE8",
+        "signal": "UART7_TX",
+        "config": "UART7",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:76"
+      },
+      {
+        "pin": "PE7",
+        "signal": "UART7_RX",
+        "config": "UART7",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:77"
+      },
+      {
+        "pin": "PE9",
+        "signal": "UART7_RTS",
+        "config": "UART7",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:78"
+      },
+      {
+        "pin": "PE10",
+        "signal": "UART7_CTS",
+        "config": "UART7",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:79"
+      },
+      {
+        "pin": "PA9",
+        "signal": "USART1_TX",
+        "config": "USART1",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:80"
+      },
+      {
+        "pin": "PA10",
+        "signal": "USART1_RX",
+        "config": "USART1",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:81"
+      },
+      {
+        "pin": "PE1",
+        "signal": "UART8_TX",
+        "config": "UART8",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:82"
+      },
+      {
+        "pin": "PE0",
+        "signal": "UART8_RX",
+        "config": "UART8",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:83"
+      },
+      {
+        "pin": "PD8",
+        "signal": "USART3_TX",
+        "config": "USART3",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:85"
+      },
+      {
+        "pin": "PD9",
+        "signal": "USART3_RX",
+        "config": "USART3",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:86"
+      },
+      {
+        "pin": "PD0",
+        "signal": "CAN1_RX",
+        "config": "CAN1",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:88"
+      },
+      {
+        "pin": "PD1",
+        "signal": "CAN1_TX",
+        "config": "CAN1",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:89"
+      },
+      {
+        "pin": "PB5",
+        "signal": "CAN2_RX",
+        "config": "CAN2",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:90"
+      },
+      {
+        "pin": "PB6",
+        "signal": "CAN2_TX",
+        "config": "CAN2",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:91"
+      },
+      {
+        "pin": "PA8",
+        "signal": "GPIO_CAN1_SILENT",
+        "config": "OUTPUT PUSHPULL SPEED_LOW LOW GPIO(70)",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:93"
+      },
+      {
+        "pin": "PD7",
+        "signal": "GPIO_CAN2_SILENT",
+        "config": "OUTPUT PUSHPULL SPEED_LOW LOW GPIO(71)",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:94"
+      },
+      {
+        "pin": "PB14",
+        "signal": "TIM1_CH2N",
+        "config": "TIM1 PWM(1) GPIO(50)",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:97"
+      },
+      {
+        "pin": "PB15",
+        "signal": "TIM1_CH3N",
+        "config": "TIM1 PWM(2) GPIO(51)",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:98"
+      },
+      {
+        "pin": "PD13",
+        "signal": "TIM4_CH2",
+        "config": "TIM4 PWM(3) GPIO(52)",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:99"
+      },
+      {
+        "pin": "PD14",
+        "signal": "TIM4_CH3",
+        "config": "TIM4 PWM(4) GPIO(53)",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:100"
+      },
+      {
+        "pin": "PD15",
+        "signal": "TIM4_CH4",
+        "config": "TIM4 PWM(5) GPIO(54)",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:101"
+      },
+      {
+        "pin": "PC6",
+        "signal": "TIM8_CH1",
+        "config": "TIM8 PWM(6) GPIO(55)",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:102"
+      },
+      {
+        "pin": "PC7",
+        "signal": "TIM8_CH2",
+        "config": "TIM8 PWM(7) GPIO(56)",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:103"
+      },
+      {
+        "pin": "PA3",
+        "signal": "TIM5_CH4",
+        "config": "TIM5 PWM(8) GPIO(57)",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:104"
+      },
+      {
+        "pin": "PA2",
+        "signal": "TIM5_CH3",
+        "config": "TIM5 PWM(9) GPIO(58)",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:105"
+      },
+      {
+        "pin": "PA1",
+        "signal": "TIM5_CH2",
+        "config": "TIM5 PWM(10) GPIO(59)",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:106"
+      },
+      {
+        "pin": "PA0",
+        "signal": "TIM5_CH1",
+        "config": "TIM5 PWM(11) GPIO(60)",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:107"
+      },
+      {
+        "pin": "PE6",
+        "signal": "TIM15_CH2",
+        "config": "TIM15 PWM(12) GPIO(61)",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:108"
+      },
+      {
+        "pin": "PE5",
+        "signal": "TIM15_CH1",
+        "config": "TIM15 PWM(13) GPIO(62)",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:109"
+      },
+      {
+        "pin": "PB3",
+        "signal": "TIM2_CH2",
+        "config": "TIM2 RCININT PULLDOWN LOW",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:110"
+      },
+      {
+        "pin": "PB4",
+        "signal": "TIM3_CH1",
+        "config": "TIM3 GPIO(77) ALARM",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:112"
+      },
+      {
+        "pin": "PA15",
+        "signal": "HEATER",
+        "config": "OUTPUT LOW GPIO(80)",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:115"
+      },
+      {
+        "pin": "PC8",
+        "signal": "SDMMC1_D0",
+        "config": "SDMMC1",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:122"
+      },
+      {
+        "pin": "PC9",
+        "signal": "SDMMC1_D1",
+        "config": "SDMMC1",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:123"
+      },
+      {
+        "pin": "PC10",
+        "signal": "SDMMC1_D2",
+        "config": "SDMMC1",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:124"
+      },
+      {
+        "pin": "PC11",
+        "signal": "SDMMC1_D3",
+        "config": "SDMMC1",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:125"
+      },
+      {
+        "pin": "PC12",
+        "signal": "SDMMC1_CK",
+        "config": "SDMMC1",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:126"
+      },
+      {
+        "pin": "PD2",
+        "signal": "SDMMC1_CMD",
+        "config": "SDMMC1",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:127"
+      }
+    ],
+    "outputs": [
+      {
+        "channel": 1,
+        "pin": "PB14",
+        "timer": "TIM1_CH2N",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:97"
+      },
+      {
+        "channel": 2,
+        "pin": "PB15",
+        "timer": "TIM1_CH3N",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:98"
+      },
+      {
+        "channel": 3,
+        "pin": "PD13",
+        "timer": "TIM4_CH2",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:99"
+      },
+      {
+        "channel": 4,
+        "pin": "PD14",
+        "timer": "TIM4_CH3",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:100"
+      },
+      {
+        "channel": 5,
+        "pin": "PD15",
+        "timer": "TIM4_CH4",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:101"
+      },
+      {
+        "channel": 6,
+        "pin": "PC6",
+        "timer": "TIM8_CH1",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:102"
+      },
+      {
+        "channel": 7,
+        "pin": "PC7",
+        "timer": "TIM8_CH2",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:103"
+      },
+      {
+        "channel": 8,
+        "pin": "PA3",
+        "timer": "TIM5_CH4",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:104"
+      },
+      {
+        "channel": 9,
+        "pin": "PA2",
+        "timer": "TIM5_CH3",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:105"
+      },
+      {
+        "channel": 10,
+        "pin": "PA1",
+        "timer": "TIM5_CH2",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:106"
+      },
+      {
+        "channel": 11,
+        "pin": "PA0",
+        "timer": "TIM5_CH1",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:107"
+      },
+      {
+        "channel": 12,
+        "pin": "PE6",
+        "timer": "TIM15_CH2",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:108"
+      },
+      {
+        "channel": 13,
+        "pin": "PE5",
+        "timer": "TIM15_CH1",
+        "source": "ardupilot_hwdef/MyboxH743_mini_v2_vib/hwdef.dat:109"
+      }
+    ],
+    "voltage_scale": 21.0,
+    "current_scale": 83.333,
+    "storage": {
+      "sd": "SDMMC1",
+      "internal_flash_write": "disabled_no_reserved_scratch_region"
+    },
+    "limitations": [
+      "Нет физического испытания в этом сеансе",
+      "Нет схемы выносного модуля"
+    ]
+  },
+  "tests": {
+    "imu0.id": {
+      "event": "test",
+      "test": "imu0.id",
+      "device": "imu0",
+      "method": "identity",
+      "automatic": true,
+      "applicable": true,
+      "demo": true
+    },
+    "imu0.stream": {
+      "event": "test",
+      "test": "imu0.stream",
+      "device": "imu0",
+      "method": "stream",
+      "automatic": true,
+      "applicable": true,
+      "demo": true
+    },
+    "imu1.id": {
+      "event": "test",
+      "test": "imu1.id",
+      "device": "imu1",
+      "method": "identity",
+      "automatic": true,
+      "applicable": true,
+      "demo": true
+    },
+    "imu1.stream": {
+      "event": "test",
+      "test": "imu1.stream",
+      "device": "imu1",
+      "method": "stream",
+      "automatic": true,
+      "applicable": true,
+      "demo": true
+    },
+    "baro0.id": {
+      "event": "test",
+      "test": "baro0.id",
+      "device": "baro0",
+      "method": "identity",
+      "automatic": true,
+      "applicable": true,
+      "demo": true
+    },
+    "baro0.stream": {
+      "event": "test",
+      "test": "baro0.stream",
+      "device": "baro0",
+      "method": "stream",
+      "automatic": true,
+      "applicable": true,
+      "demo": true
+    },
+    "baro1.id": {
+      "event": "test",
+      "test": "baro1.id",
+      "device": "baro1",
+      "method": "identity",
+      "automatic": true,
+      "applicable": true,
+      "demo": true
+    },
+    "baro1.stream": {
+      "event": "test",
+      "test": "baro1.stream",
+      "device": "baro1",
+      "method": "stream",
+      "automatic": true,
+      "applicable": true,
+      "demo": true
+    },
+    "osd.register": {
+      "event": "test",
+      "test": "osd.register",
+      "device": "osd",
+      "method": "register",
+      "automatic": true,
+      "applicable": true,
+      "demo": true
+    },
+    "sd.read": {
+      "event": "test",
+      "test": "sd.read",
+      "device": "sd",
+      "method": "filesystem",
+      "automatic": true,
+      "applicable": true,
+      "demo": true
+    },
+    "sd.write": {
+      "event": "test",
+      "test": "sd.write",
+      "device": "sd",
+      "method": "scratch_file",
+      "automatic": true,
+      "applicable": true,
+      "demo": true
+    },
+    "flash.read": {
+      "event": "test",
+      "test": "flash.read",
+      "device": "flash",
+      "method": "read_crc",
+      "automatic": true,
+      "applicable": true,
+      "demo": true
+    },
+    "usb.link": {
+      "event": "test",
+      "test": "usb.link",
+      "device": "usb",
+      "method": "framed_heartbeat",
+      "automatic": true,
+      "applicable": true,
+      "demo": true
+    }
+  },
+  "results": {
+    "imu0.id": {
+      "event": "result",
+      "test": "imu0.id",
+      "state": "passed",
+      "code": "DEMO_SIMULATED",
+      "detail": "Демонстрация: синтетический результат, физическая плата не проверялась",
+      "expected": "Синтетические демонстрационные данные",
+      "actual": "Симулятор",
+      "duration_ms": 1500,
+      "demo": true
+    },
+    "imu0.stream": {
+      "event": "result",
+      "test": "imu0.stream",
+      "state": "passed",
+      "code": "DEMO_SIMULATED",
+      "detail": "Демонстрация: синтетический результат, физическая плата не проверялась",
+      "expected": "Синтетические демонстрационные данные",
+      "actual": "Симулятор",
+      "duration_ms": 1500,
+      "demo": true
+    },
+    "imu1.id": {
+      "event": "result",
+      "test": "imu1.id",
+      "state": "passed",
+      "code": "DEMO_SIMULATED",
+      "detail": "Демонстрация: синтетический результат, физическая плата не проверялась",
+      "expected": "Синтетические демонстрационные данные",
+      "actual": "Симулятор",
+      "duration_ms": 1500,
+      "demo": true
+    },
+    "imu1.stream": {
+      "event": "result",
+      "test": "imu1.stream",
+      "state": "passed",
+      "code": "DEMO_SIMULATED",
+      "detail": "Демонстрация: синтетический результат, физическая плата не проверялась",
+      "expected": "Синтетические демонстрационные данные",
+      "actual": "Симулятор",
+      "duration_ms": 1500,
+      "demo": true
+    },
+    "baro0.id": {
+      "event": "result",
+      "test": "baro0.id",
+      "state": "passed",
+      "code": "DEMO_SIMULATED",
+      "detail": "Демонстрация: синтетический результат, физическая плата не проверялась",
+      "expected": "Синтетические демонстрационные данные",
+      "actual": "Симулятор",
+      "duration_ms": 1500,
+      "demo": true
+    },
+    "baro0.stream": {
+      "event": "result",
+      "test": "baro0.stream",
+      "state": "passed",
+      "code": "DEMO_SIMULATED",
+      "detail": "Демонстрация: синтетический результат, физическая плата не проверялась",
+      "expected": "Синтетические демонстрационные данные",
+      "actual": "Симулятор",
+      "duration_ms": 1500,
+      "demo": true
+    },
+    "baro1.id": {
+      "event": "result",
+      "test": "baro1.id",
+      "state": "passed",
+      "code": "DEMO_SIMULATED",
+      "detail": "Демонстрация: синтетический результат, физическая плата не проверялась",
+      "expected": "Синтетические демонстрационные данные",
+      "actual": "Симулятор",
+      "duration_ms": 1500,
+      "demo": true
+    },
+    "baro1.stream": {
+      "event": "result",
+      "test": "baro1.stream",
+      "state": "passed",
+      "code": "DEMO_SIMULATED",
+      "detail": "Демонстрация: синтетический результат, физическая плата не проверялась",
+      "expected": "Синтетические демонстрационные данные",
+      "actual": "Симулятор",
+      "duration_ms": 1500,
+      "demo": true
+    },
+    "osd.register": {
+      "event": "result",
+      "test": "osd.register",
+      "state": "passed",
+      "code": "DEMO_SIMULATED",
+      "detail": "Демонстрация: синтетический результат, физическая плата не проверялась",
+      "expected": "Синтетические демонстрационные данные",
+      "actual": "Симулятор",
+      "duration_ms": 1500,
+      "demo": true
+    },
+    "sd.read": {
+      "event": "result",
+      "test": "sd.read",
+      "state": "passed",
+      "code": "DEMO_SIMULATED",
+      "detail": "Демонстрация: синтетический результат, физическая плата не проверялась",
+      "expected": "Синтетические демонстрационные данные",
+      "actual": "Симулятор",
+      "duration_ms": 1500,
+      "demo": true
+    },
+    "sd.write": {
+      "event": "result",
+      "test": "sd.write",
+      "state": "passed",
+      "code": "DEMO_SIMULATED",
+      "detail": "Демонстрация: синтетический результат, физическая плата не проверялась",
+      "expected": "Синтетические демонстрационные данные",
+      "actual": "Симулятор",
+      "duration_ms": 1500,
+      "demo": true
+    },
+    "flash.read": {
+      "event": "result",
+      "test": "flash.read",
+      "state": "passed",
+      "code": "DEMO_SIMULATED",
+      "detail": "Демонстрация: синтетический результат, физическая плата не проверялась",
+      "expected": "Синтетические демонстрационные данные",
+      "actual": "Симулятор",
+      "duration_ms": 1500,
+      "demo": true
+    },
+    "usb.link": {
+      "event": "result",
+      "test": "usb.link",
+      "state": "passed",
+      "code": "DEMO_SIMULATED",
+      "detail": "Демонстрация: синтетический результат, физическая плата не проверялась",
+      "expected": "Синтетические демонстрационные данные",
+      "actual": "Симулятор",
+      "duration_ms": 1500,
+      "demo": true
+    }
+  },
+  "conclusion": "Автоматические проверки пройдены",
+  "events": [
+    {
+      "received_utc": "2026-11-20T16:02:07.435837+00:00",
+      "origin": "pc",
+      "event": "connection",
+      "state": "Подключение…"
+    },
+    {
+      "received_utc": "2026-11-20T16:02:07.439841+00:00",
+      "origin": "pc",
+      "event": "connection",
+      "state": "ДЕМОНСТРАЦИЯ"
+    },
+    {
+      "received_utc": "2026-11-20T16:02:07.439841+00:00",
+      "event": "list_complete",
+      "demo": true
+    },
+    {
+      "received_utc": "2026-11-20T16:02:07.439841+00:00",
+      "event": "results_complete",
+      "demo": true
+    }
+  ],
+  "latest_telemetry": {
+    "imu0": {
+      "sensor": "imu0",
+      "sample_ms": 3421,
+      "sample_count": 684,
+      "fresh": true,
+      "measurement_hz": 199.8,
+      "configured_odr_hz": 200,
+      "errors": 0,
+      "saturated": 0,
+      "accel_m_s2": [
+        -2.3671365826727113,
+        3.984954715443485,
+        8.642174757393954
+      ],
+      "gyro_deg_s": [
+        -3.1298197553077065,
+        4.066009358524782,
+        4.247927201658793
+      ],
+      "temperature_c": 29.0,
+      "raw": [
+        -236,
+        398,
+        864,
+        -312,
+        406,
+        424,
+        512
+      ],
+      "rotation": "ROTATION_NONE",
+      "demo": true
+    },
+    "imu1": {
+      "sensor": "imu1",
+      "sample_ms": 3421,
+      "sample_count": 684,
+      "fresh": true,
+      "measurement_hz": 199.8,
+      "configured_odr_hz": 200,
+      "errors": 0,
+      "saturated": 0,
+      "accel_m_s2": [
+        -2.3671365826727113,
+        3.984954715443485,
+        8.642174757393954
+      ],
+      "gyro_deg_s": [
+        -3.1298197553077065,
+        4.066009358524782,
+        4.247927201658793
+      ],
+      "temperature_c": 29.2,
+      "raw": [
+        -236,
+        398,
+        864,
+        -312,
+        406,
+        424,
+        512
+      ],
+      "rotation": "ROTATION_NONE",
+      "demo": true
+    },
+    "baro0": {
+      "sensor": "baro0",
+      "sample_ms": 3421,
+      "sample_count": 109,
+      "fresh": true,
+      "measurement_hz": 32,
+      "errors": 0,
+      "pressure_pa": 101337.64416492467,
+      "temperature_c": 24.0,
+      "relative_altitude_m": -1.0494656887476708,
+      "demo": true
+    },
+    "baro1": {
+      "sensor": "baro1",
+      "sample_ms": 3421,
+      "sample_count": 109,
+      "fresh": true,
+      "measurement_hz": 32,
+      "errors": 0,
+      "pressure_pa": 101338.64416492467,
+      "temperature_c": 24.1,
+      "relative_altitude_m": -1.0494656887476708,
+      "demo": true
+    },
+    "adc.voltage": {
+      "sensor": "adc.voltage",
+      "sample_ms": 3421,
+      "raw": 11442.619047619048,
+      "adc_voltage_v": 0.5761904761904761,
+      "scale": 21.0,
+      "value": 12.1,
+      "fresh": true,
+      "units": "V",
+      "measurement_hz": null,
+      "demo": true
+    },
+    "adc.current": {
+      "sensor": "adc.current",
+      "sample_ms": 3421,
+      "raw": 23.831004414926756,
+      "adc_voltage_v": 0.0012000048000192002,
+      "scale": 83.333,
+      "value": 0.1,
+      "fresh": true,
+      "units": "A",
+      "measurement_hz": null,
+      "demo": true
+    },
+    "adc.pressure": {
+      "sensor": "adc.pressure",
+      "sample_ms": 3421,
+      "raw": 0.0,
+      "adc_voltage_v": 0.0,
+      "scale": 2,
+      "value": 0,
+      "fresh": true,
+      "units": "V",
+      "measurement_hz": null,
+      "demo": true
+    },
+    "adc.rssi": {
+      "sensor": "adc.rssi",
+      "sample_ms": 3421,
+      "raw": 0.0,
+      "adc_voltage_v": 0.0,
+      "scale": 1,
+      "value": 0,
+      "fresh": true,
+      "units": "V",
+      "measurement_hz": null,
+      "demo": true
+    }
+  },
+  "telemetry_packets": 440,
+  "transport": {
+    "parser_errors": 0,
+    "missing_frames": 0,
+    "received_frames": 448,
+    "pending": 0
+  }
+}

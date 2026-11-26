@@ -1,0 +1,7 @@
+.venv/
+.windows-build/
+__pycache__/
+.pytest_cache/
+dist/
+MyboxReports/
+*.spec

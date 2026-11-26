@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "values": {
+    "imu_stale_ms": 250,
+    "baro_stale_ms": 500,
+    "observation_ms": 1500,
+    "rest_gyro_deg_s": 5.0,
+    "rest_gravity_tolerance_m_s2": 1.5,
+    "motion_gyro_deg_s": 30.0,
+    "imu_difference_m_s2": 3.0,
+    "pressure_min_pa": 10000.0,
+    "pressure_max_pa": 130000.0,
+    "temperature_min_c": -40.0,
+    "temperature_max_c": 85.0,
+    "actuator_lease_ms": 750,
+    "actuator_max_ms": 2000,
+    "test_timeout_ms": 6000
+  },
+  "rationale": {
+    "freshness": "Polling at 200 Hz IMU / about 32-50 Hz barometer: limits tolerate transport/loop jitter while detecting a stopped sensor. These are diagnostic deadlines, not flight-control limits.",
+    "rest": "Broad uncalibrated bench screening around standard gravity 9.80665 m/s2. Failure to meet conditions produces warning, not hardware fault.",
+    "motion": "30 deg/s establishes observable manual rotation; absent motion requests operator action.",
+    "agreement": "3 m/s2 screening in hardware-profile axes. Exceedance is warning because mounting and vibration may differ.",
+    "environment": "Broad plausibility window only. Out-of-window values need environmental/reference verification and never alone prove a damaged sensor.",
+    "lease": "An active output needs fresh valid USB commands within 750 ms and always expires after at most 2000 ms. Main-loop delays cannot extend the independent timer cutoff."
+  }
+}

@@ -1,0 +1,80 @@
+[
+  {
+    "test": "imu0.id",
+    "device": "imu0",
+    "method": "identity",
+    "automatic": true
+  },
+  {
+    "test": "imu0.stream",
+    "device": "imu0",
+    "method": "stream",
+    "automatic": true
+  },
+  {
+    "test": "imu1.id",
+    "device": "imu1",
+    "method": "identity",
+    "automatic": true
+  },
+  {
+    "test": "imu1.stream",
+    "device": "imu1",
+    "method": "stream",
+    "automatic": true
+  },
+  {
+    "test": "baro0.id",
+    "device": "baro0",
+    "method": "identity",
+    "automatic": true
+  },
+  {
+    "test": "baro0.stream",
+    "device": "baro0",
+    "method": "stream",
+    "automatic": true
+  },
+  {
+    "test": "baro1.id",
+    "device": "baro1",
+    "method": "identity",
+    "automatic": true
+  },
+  {
+    "test": "baro1.stream",
+    "device": "baro1",
+    "method": "stream",
+    "automatic": true
+  },
+  {
+    "test": "osd.register",
+    "device": "osd",
+    "method": "register",
+    "automatic": true
+  },
+  {
+    "test": "sd.read",
+    "device": "sd",
+    "method": "filesystem",
+    "automatic": true
+  },
+  {
+    "test": "sd.write",
+    "device": "sd",
+    "method": "scratch_file",
+    "automatic": true
+  },
+  {
+    "test": "flash.read",
+    "device": "flash",
+    "method": "read_crc",
+    "automatic": true
+  },
+  {
+    "test": "usb.link",
+    "device": "usb",
+    "method": "framed_heartbeat",
+    "automatic": true
+  }
+]
