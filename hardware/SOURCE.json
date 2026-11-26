@@ -1,0 +1,47 @@
+{
+  "platform_repository": "Artem2817/MYBOXES_Ardupilot",
+  "platform_commit": "046cafbceec1a30a202b2eefe64554e5ea54cf01",
+  "note": "Diagnostic snapshots from the published 0.2.1 firmware; Mini has diagnostic-specific buzzer/board ID settings. Do not overwrite with flight HWDEF.",
+  "files": [
+    {
+      "path": "hardware/MyboxH743_mini/hwdef-bl.dat",
+      "sha256": "e416400fe59cd31d48a540dfad59fd1ba5dae8084d08d7b2c3b123cf38b22d32"
+    },
+    {
+      "path": "hardware/MyboxH743_mini/hwdef.dat",
+      "sha256": "58be36244ace1aaa8e176e2570ba24772382c17ddde902784cbd8135fe3a0e82"
+    },
+    {
+      "path": "hardware/MyboxH743_mini_v2/README.md",
+      "sha256": "ca707cece0c37d6e20cda98ffa1868f00908ada37543f22d5e5210ae143a01ec"
+    },
+    {
+      "path": "hardware/MyboxH743_mini_v2/defaults.parm",
+      "sha256": "0cfe31b6f0cd547092524f2a67a0310a5d175cae68135762b615264fe7cccc46"
+    },
+    {
+      "path": "hardware/MyboxH743_mini_v2/hwdef-bl.dat",
+      "sha256": "46f249c9b6147ff62e7ef872bcf8a5769865697595e9639eb6bfc68e2763b7d7"
+    },
+    {
+      "path": "hardware/MyboxH743_mini_v2/hwdef.dat",
+      "sha256": "a39f872e09ff160bd94fa31530d313fec0cecc4b03e2b371be3d0d6f9a3ffad5"
+    },
+    {
+      "path": "hardware/MyboxH743_mini_v2_vib/README.md",
+      "sha256": "c313a400b2394244a7c9c71b636200c4a8a0bacd5650900ed471a779e12f21a6"
+    },
+    {
+      "path": "hardware/MyboxH743_mini_v2_vib/defaults.parm",
+      "sha256": "0cfe31b6f0cd547092524f2a67a0310a5d175cae68135762b615264fe7cccc46"
+    },
+    {
+      "path": "hardware/MyboxH743_mini_v2_vib/hwdef-bl.dat",
+      "sha256": "8afd5912cfb33af7ea8f8626632098c2b1bd3336820cacad943e7af09fe5361b"
+    },
+    {
+      "path": "hardware/MyboxH743_mini_v2_vib/hwdef.dat",
+      "sha256": "8cee6dc01d7bf1ae00b0805a5f6ab11ffbd6ea5be8fe3e357ff33b5b1762f3d2"
+    }
+  ]
+}

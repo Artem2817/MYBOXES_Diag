@@ -2,6 +2,8 @@
 
 Стендовая диагностика MYBOX на STM32H743. Только автоматические проверки. Разработано с помощью AI; не является полётной прошивкой.
 
+[Скачать MyboxDiag](https://artem2817.github.io/MYBOXES_Ardupilot/diagnostics.html) · [GitHub Releases](https://github.com/Artem2817/MYBOXES_Diag/releases)
+
 ## Готовые файлы
 
 - `dist/windows-standalone/MyboxDiag-0.2.2-windows-x64.exe` — самостоятельная программа Windows x64.
@@ -73,12 +75,32 @@ python3 tools/verify_hex.py dist/firmware
 
 ```sh
 PYTHONPATH=pc python3 -m pytest tests -q
-python3 -m unittest discover -s tools/site_baseline/tests -p test_build_firmware_site.py
+
 QT_QPA_PLATFORM=offscreen PYTHONPATH=pc python3 pc/run.py --smoke-demo --output examples/local-check
 ```
 
 Проверяются повреждение/фрагментация кадра, тайм-аут неполного сообщения, переход номера через 2³², совпадение протокола C++/Python, строгие команды, виртуальный последовательный порт, отключение, отчёты, повороты и сохранность каталога сайта.
 
-## Сайт
+## Репозитории и публикация
 
-`site-source` — добавления к существующему GitHub Pages каталогу MYBOXES_Ardupilot. Исходные `app.js`, `live-catalog.js`, сценарий каталога и Actions публикации не меняются. Справка добавлена отдельным компонентом внизу главной страницы; диагностические HEX — отдельная `diagnostics.html`. Подготовка файлов: `python3 tools/package_site.py`. Перед публикацией выполнить проверки и сравнить с актуальным main, не затирать чужие изменения.
+Этот репозиторий — единственный источник исходников MyboxDiag. Исходники импортированы из опубликованного комплекта 0.2.2; приложение и прошивка при переносе не менялись. Автор изменений — Artem2817, разработка с помощью AI.
+
+- pc/ — приложение Windows/Linux, зависимости и упаковка.
+- firmware/ — диагностическое приложение STM32.
+- hardware/, profiles/, config/ — фиксированные аппаратные снимки, профили и пороги.
+- tests/ — протокол, отчёты, соединение, UI, профили и упаковка.
+- tools/ — сборка и экспорт выпуска.
+- release.json — версии приложения, диагностической прошивки и платформы.
+- hardware/SOURCE.json — происхождение аппаратных снимков и контрольные суммы.
+
+Копии сайта здесь нет. Сайт ведётся в MYBOXES_Ardupilot/site/firmware-download и получает ссылки из diagnostic-index.json выпуска. Не копируйте целиком старый site-source поверх живого сайта.
+
+Для экспорта уже существующих проверенных файлов:
+
+```sh
+python3 tools/package_release.py --index /path/to/diagnostic-index.json --output /path/to/empty-release --source-archive
+```
+
+Экспорт проверяет исходные SHA-256, сохраняет байты HEX/EXE и формирует манифест с исходным коммитом, новый SHA256SUMS и публичные ссылки. Он не собирает и не прошивает контроллер. Выпускать следует новый тег; замена файлов существующего релиза запрещена.
+
+Проверки MyboxDiag checks выполняются при push и pull request. Windows EXE собирается отдельно вручную через Build MyboxDiag Windows app. Сборки полётного ArduPilot эти сценарии не запускают.

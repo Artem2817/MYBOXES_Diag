@@ -1,0 +1,24 @@
+name: Build MyboxDiag Windows app
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: windows-2022
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Package Windows application
+        shell: cmd
+        run: pc\build-windows.cmd
+      - uses: actions/upload-artifact@v4
+        with:
+          name: myboxdiag-windows
+          path: dist/windows-standalone/
+          retention-days: 14

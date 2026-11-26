@@ -1,0 +1,44 @@
+name: MyboxDiag checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: diag-checks-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  checks:
+    name: MyboxDiag checks
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      QT_QPA_PLATFORM: offscreen
+      PYTHONPATH: pc
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: |
+            requirements-dev.txt
+            pc/requirements.txt
+      - name: Install test dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libegl1 libopengl0 libxcb-cursor0
+          python -m pip install -r requirements-dev.txt
+      - name: Test protocol, reports, hardware profiles and UI
+        run: python -m pytest tests -q
+      - name: Run diagnostic demo
+        run: python pc/run.py --smoke-demo --output dist/demo
+      - uses: actions/upload-artifact@v4
+        with:
+          name: myboxdiag-demo
+          path: dist/demo/
+          retention-days: 14
